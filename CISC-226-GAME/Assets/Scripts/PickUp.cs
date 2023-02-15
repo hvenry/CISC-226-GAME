@@ -14,10 +14,12 @@ public class PickUp : MonoBehaviour
     public Vector3 Direction { get; set; }
     private GameObject itemHolding;
     private GameObject itemHolding2;
+    private GameObject itemHolding3;
+    private GameObject itemHolding4;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             if (itemHolding)
             {
@@ -44,7 +46,7 @@ public class PickUp : MonoBehaviour
             
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             if (itemHolding2)
             {
@@ -73,7 +75,64 @@ public class PickUp : MonoBehaviour
         }
         
         
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (itemHolding3)
+            {
+                itemHolding3.transform.position = transform.position + Direction;
+                itemHolding3.transform.parent = null;
+                if (itemHolding3.GetComponent<Rigidbody2D>())
+                    itemHolding3.GetComponent<Rigidbody2D>().simulated = true;
+                itemHolding3 = null;
+            }
+            else
+            {
+                Collider2D pickUpItem3 = Physics2D.OverlapCircle(transform.position + Direction, .4f, pickUpMask);
+                
+                if (pickUpItem3)
+                {
+                    itemHolding3 = pickUpItem3.gameObject;
+                    itemHolding3.transform.position = holdSpot3.position;
+                    itemHolding3.transform.parent = transform;
+                    if (itemHolding3.GetComponent<Rigidbody2D>())
+                        itemHolding3.GetComponent<Rigidbody2D>().simulated = false;
+                }
+                
+
+                
+            }
+        }
+        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (itemHolding4)
+            {
+                itemHolding4.transform.position = transform.position + Direction;
+                itemHolding4.transform.parent = null;
+                if (itemHolding4.GetComponent<Rigidbody2D>())
+                    itemHolding4.GetComponent<Rigidbody2D>().simulated = true;
+                itemHolding4 = null;
+            }
+            else
+            {
+                Collider2D pickUpItem4 = Physics2D.OverlapCircle(transform.position + Direction, .4f, pickUpMask);
+                
+                if (pickUpItem4)
+                {
+                    itemHolding4 = pickUpItem4.gameObject;
+                    itemHolding4.transform.position = holdSpot2.position;
+                    itemHolding4.transform.parent = transform;
+                    if (itemHolding4.GetComponent<Rigidbody2D>())
+                        itemHolding4.GetComponent<Rigidbody2D>().simulated = false;
+                }
+                
+
+                
+            }
+        }
+        
+        
+        if (Input.GetKeyDown(KeyCode.V))
         {
             if (itemHolding)
             {
