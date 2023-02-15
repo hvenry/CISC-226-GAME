@@ -5,10 +5,15 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     public Transform holdSpot;
+    public Transform holdSpot2;
+    public Transform holdSpot3;
+    public Transform holdSpot4;
+    
     public LayerMask pickUpMask;
     public GameObject destroyEffect;
     public Vector3 Direction { get; set; }
     private GameObject itemHolding;
+    private GameObject itemHolding2;
 
     void Update()
     {
@@ -25,6 +30,7 @@ public class PickUp : MonoBehaviour
             else
             {
                 Collider2D pickUpItem = Physics2D.OverlapCircle(transform.position + Direction, .4f, pickUpMask);
+
                 if (pickUpItem)
                 {
                     itemHolding = pickUpItem.gameObject;
@@ -33,9 +39,40 @@ public class PickUp : MonoBehaviour
                     if (itemHolding.GetComponent<Rigidbody2D>())
                         itemHolding.GetComponent<Rigidbody2D>().simulated = false;
                 }
+                
             }
-
+            
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (itemHolding2)
+            {
+                itemHolding2.transform.position = transform.position + Direction;
+                itemHolding2.transform.parent = null;
+                if (itemHolding2.GetComponent<Rigidbody2D>())
+                    itemHolding2.GetComponent<Rigidbody2D>().simulated = true;
+                itemHolding2 = null;
+            }
+            else
+            {
+                Collider2D pickUpItem2 = Physics2D.OverlapCircle(transform.position + Direction, .4f, pickUpMask);
+                
+                if (pickUpItem2)
+                {
+                    itemHolding2 = pickUpItem2.gameObject;
+                    itemHolding2.transform.position = holdSpot2.position;
+                    itemHolding2.transform.parent = transform;
+                    if (itemHolding2.GetComponent<Rigidbody2D>())
+                        itemHolding2.GetComponent<Rigidbody2D>().simulated = false;
+                }
+                
+
+                
+            }
+        }
+        
+        
         if (Input.GetKeyDown(KeyCode.Q))
         {
             if (itemHolding)
