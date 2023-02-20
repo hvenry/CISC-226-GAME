@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 66959437}
   - component: {fileID: 66959439}
   - component: {fileID: 66959438}
+  - component: {fileID: 66959440}
   m_Layer: 3
   m_Name: Test_Box
   m_TagString: Untagged
@@ -256,6 +257,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &66959440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66959435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5bcc35f7e54ac79789701e42618784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
+  speed: 5
 --- !u!1 &80834169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,6 +1097,7 @@ GameObject:
   - component: {fileID: 1355179477}
   - component: {fileID: 1355179476}
   - component: {fileID: 1355179475}
+  - component: {fileID: 1355179478}
   m_Layer: 3
   m_Name: Test_Box (1)
   m_TagString: Untagged
@@ -1203,6 +1219,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1355179478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355179473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5bcc35f7e54ac79789701e42618784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
+  speed: 5
 --- !u!1 &1365425356
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,6 +2264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1949135523}
+  - component: {fileID: 1949135524}
   m_Layer: 0
   m_Name: Animals
   m_TagString: Untagged
@@ -2260,6 +2291,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1949135524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949135522}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5bcc35f7e54ac79789701e42618784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
+  speed: 2
 --- !u!1 &2021993459
 GameObject:
   m_ObjectHideFlags: 0
@@ -2272,6 +2317,7 @@ GameObject:
   - component: {fileID: 2021993463}
   - component: {fileID: 2021993462}
   - component: {fileID: 2021993461}
+  - component: {fileID: 2021993464}
   m_Layer: 3
   m_Name: Test_Box (3)
   m_TagString: Untagged
@@ -2393,6 +2439,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2021993464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021993459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5bcc35f7e54ac79789701e42618784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
+  speed: 5
 --- !u!1 &2100481594
 GameObject:
   m_ObjectHideFlags: 0
@@ -2405,6 +2465,7 @@ GameObject:
   - component: {fileID: 2100481598}
   - component: {fileID: 2100481597}
   - component: {fileID: 2100481596}
+  - component: {fileID: 2100481599}
   m_Layer: 3
   m_Name: Test_Box (2)
   m_TagString: Untagged
@@ -2526,3 +2587,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2100481599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100481594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5bcc35f7e54ac79789701e42618784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
+  speed: 5

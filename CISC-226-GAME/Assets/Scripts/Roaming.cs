@@ -21,7 +21,7 @@ public class Roaming : BaseState
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-        Vector3 direction = _sm.rigidbody.position - target.position;
+        Vector2 direction = _sm.rigidbody.position - (Vector2)target.position;
         if (direction.sqrMagnitude < 25f)
         {
             stateMachine.ChangeState(_sm.fleeState);

@@ -10,8 +10,9 @@ public class MovementSM : StateMachine
     public Roaming roamState;
     [HideInInspector]
     public Fleeing fleeState;
-
-    public Rigidbody rigidbody;
+    
+    [HideInInspector]
+    public Rigidbody2D rigidbody;
     public float speed = 2f;
 
     private void Awake()
@@ -19,7 +20,7 @@ public class MovementSM : StateMachine
         idleState = new Idle(this);
         roamState = new Roaming(this);
         fleeState = new Fleeing(this);
-        rigidbody = GetComponent<Rigidbody>();
+        rigidbody = GetComponent<Rigidbody2D>();
     }
     protected override BaseState GetInitialState()
     {

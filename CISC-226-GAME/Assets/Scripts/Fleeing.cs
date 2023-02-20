@@ -20,7 +20,7 @@ public class Fleeing : BaseState
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-        Vector3 direction = _sm.rigidbody.position - target.position;
+        Vector2 direction = _sm.rigidbody.position - (Vector2)target.position;
         _sm.rigidbody.MovePosition(_sm.rigidbody.position + direction.normalized * Time.deltaTime * _sm.speed);
         
         //if timer above threshold return to idle if out of range
