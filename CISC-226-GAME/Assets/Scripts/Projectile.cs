@@ -5,36 +5,18 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public GameObject start;
-    public GameObject target;
-
-    public float speed = 50f;
-
-    public float targetX;
-
-    public float targetY;
-
-    private float playerX;
-
-    private float playerY;
-    private float dist;
-    private float nextX;
-    private float baseY;
-    private float height;
-
+    public Vector3 start;
     private Rigidbody2D rb;
     private Vector3 worldPosition;
+    protected float timePassed;
     
     
     // Start is called before the first frame update
     void Start()
     {
         worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        start = GameObject.FindWithTag("Player");
-        targetX = worldPosition.x;
-        targetY = worldPosition.y;
-        playerX = start.transform.position.x;
-        playerY = start.transform.position.y;
+        start = GameObject.FindWithTag("Player").transform.position;
+
         rb = GetComponent<Rigidbody2D>();
 
     }
@@ -42,12 +24,12 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dist = targetX - playerX;
-        nextX = Mathf.MoveTowards(rb.position.x, targetX, speed * Time.deltaTime);
-        baseY = Mathf.Lerp(playerY, targetY, (nextX - playerX) / dist);
-        height = 2 * (nextX - playerX) * (nextX - targetX) / (-0.25f * dist * dist);
-        Vector2 movePosition = new Vector2(nextX, baseY + height);
-        rb.MovePosition(new Vector2(nextX, baseY + height));
+        if (timePassed < 5f)
+        {
+            timePassed += Time.deltaTime;
+            transform.position = MathParabola.Parabola(start, worldPosition, 5f, timePassed / 5f);
+
+        }
         
     }
 }

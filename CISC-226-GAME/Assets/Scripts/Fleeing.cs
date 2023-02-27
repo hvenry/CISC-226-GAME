@@ -13,13 +13,11 @@ public class Fleeing : BaseState
 
     public override void Enter()
     {
-        base.Enter();
         //flee for x seconds START TIMER
     }
 
     public override void UpdateLogic()
     {
-        base.UpdateLogic();
         Vector2 direction = _sm.rigidbody.position - (Vector2)target.position;
         _sm.rigidbody.MovePosition(_sm.rigidbody.position + direction.normalized * Time.deltaTime * _sm.speed);
         
