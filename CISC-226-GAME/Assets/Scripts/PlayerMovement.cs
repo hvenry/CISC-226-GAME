@@ -8,14 +8,17 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     
     // Reference to rigidbody
-    public Rigidbody2D rb; 
+    public Rigidbody2D rb;
 
+    public PickUp pickUp;
     private Vector2 moveDirection;
 
     // Update is called once per frame
     void Update()
     {
-        ProcessInputs();   
+        ProcessInputs();
+        pickUp = gameObject.GetComponent<PickUp>();
+        pickUp.Direction = new Vector2(0, -1);
     }
 
     // fixed update is called a set amount of times per update loop (unlike frames)
