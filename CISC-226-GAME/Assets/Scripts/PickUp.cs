@@ -8,6 +8,7 @@ public class PickUp : MonoBehaviour
     public Transform holdSpot2;
     public Transform holdSpot3;
     public Transform holdSpot4;
+    public GameObject animalPrefab;
     
     public LayerMask pickUpMask;
     public GameObject destroyEffect;
@@ -140,6 +141,13 @@ public class PickUp : MonoBehaviour
                 itemHolding = null;
             }
         }
+        
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (itemHolding)
+            {
+                Instantiate(animalPrefab,itemHolding.transform.position, Quaternion.identity);
+                Destroy(itemHolding);
+            }
     }
 
     IEnumerator ThrowItem(GameObject item)

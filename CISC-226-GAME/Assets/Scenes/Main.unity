@@ -1362,6 +1362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   rb: {fileID: 1365425357}
+  prefab: {fileID: 4527659064612919112, guid: 05f78a18ee34261478b094793e8ae35a, type: 3}
   pickUp: {fileID: 0}
 --- !u!61 &1365425361
 BoxCollider2D:
@@ -1457,6 +1458,7 @@ MonoBehaviour:
   holdSpot2: {fileID: 1367799141}
   holdSpot3: {fileID: 500328559}
   holdSpot4: {fileID: 80834170}
+  animalPrefab: {fileID: 4527659064612919112, guid: 05f78a18ee34261478b094793e8ae35a, type: 3}
   pickUpMask:
     serializedVersion: 2
     m_Bits: 8

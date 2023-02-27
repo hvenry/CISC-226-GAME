@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     
     // Reference to rigidbody
     public Rigidbody2D rb;
+    public GameObject prefab;
 
     public PickUp pickUp;
     private Vector2 moveDirection;
@@ -38,8 +39,14 @@ public class PlayerMovement : MonoBehaviour
         // we use .normalized so our vectors do not stack in non-cardinal directions
         // this caps our vector at 1
         moveDirection = new Vector2(moveX, moveY).normalized;
+        
+        //spawns new animal prefab at player
+        // if (Input.GetKeyDown(KeyCode.Mouse0))
+        // {
+        //     Instantiate(prefab, rb.position, Quaternion.identity);
+        // }
 
-
+        
 
     }
 
