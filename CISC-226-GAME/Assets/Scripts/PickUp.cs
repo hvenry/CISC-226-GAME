@@ -20,7 +20,7 @@ public class PickUp : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             if (itemHolding)
             {
@@ -47,7 +47,7 @@ public class PickUp : MonoBehaviour
             
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             if (itemHolding2)
             {
@@ -76,7 +76,7 @@ public class PickUp : MonoBehaviour
         }
         
         
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             if (itemHolding3)
             {
@@ -104,7 +104,7 @@ public class PickUp : MonoBehaviour
             }
         }
         
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             if (itemHolding4)
             {
@@ -148,6 +148,21 @@ public class PickUp : MonoBehaviour
                 Instantiate(animalPrefab,itemHolding.transform.position, Quaternion.identity);
                 Destroy(itemHolding);
             }
+        if (itemHolding2)
+        {
+            Instantiate(animalPrefab,itemHolding.transform.position, Quaternion.identity);
+            Destroy(itemHolding2);
+        }
+        if (itemHolding3)
+        {
+            Instantiate(animalPrefab,itemHolding.transform.position, Quaternion.identity);
+            Destroy(itemHolding3);
+        }
+        if (itemHolding4)
+        {
+            Instantiate(animalPrefab,itemHolding.transform.position, Quaternion.identity);
+            Destroy(itemHolding4);
+        }
     }
 
     IEnumerator ThrowItem(GameObject item)
