@@ -17,9 +17,9 @@ public class Thrown : BaseState
     public override void Enter()
     {
         worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        worldPosition += new Vector3(0, 0, 5);
         start = target.position;
 
-        
     }
 
     public override void UpdateLogic()

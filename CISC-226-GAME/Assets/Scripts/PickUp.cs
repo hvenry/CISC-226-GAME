@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,15 +15,10 @@ public class PickUp : MonoBehaviour
     public LayerMask pickUpMask;
     public GameObject destroyEffect;
     public Vector3 Direction { get; set; }
-    private GameObject itemHolding;
-    private GameObject itemHolding2;
-    private GameObject itemHolding3;
-    private GameObject itemHolding4;
     private GameObject[] holdings = new GameObject[4];
 
     void Start()
     {
-        holdings = new GameObject[] { itemHolding, itemHolding2, itemHolding3, itemHolding4 };
         spots = new Transform[] { holdSpot, holdSpot2, holdSpot3, holdSpot4 };
     }
     void Update()
@@ -43,15 +39,20 @@ public class PickUp : MonoBehaviour
             {
                 for (int i = 0; i < holdings.Length;i++)
                 {
+                    Debug.Log(String.Format("Loop: {0} ",i.ToString()));
                     GameObject item = holdings[i];
                     if (item)
                         continue;
-                    item = pickUpItem.gameObject;
-                    item.transform.position = spots[i].position;
-                    item.transform.parent = transform;
-                    MovementSM script = item.GetComponent<MovementSM>();
+                    GameObject temp = pickUpItem.gameObject;
+                    
+                    Debug.Log(String.Format("Holdings: {0}", holdings.ToString()));
+                    temp.transform.position = spots[i].position;
+                    temp.transform.parent = transform;
+                    MovementSM script = temp.GetComponent<MovementSM>();
                     script.ChangeState(script.heldState);
-                    item.GetComponent<Rigidbody2D>().simulated = false;
+                    temp.GetComponent<Rigidbody2D>().simulated = false;
+                    holdings[i] = temp;
+                    break;
 
                 }
                 
@@ -59,26 +60,22 @@ public class PickUp : MonoBehaviour
             
         }
 
-       
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            if (itemHolding)
-            {
-                StartCoroutine(ThrowItem(itemHolding));
-                itemHolding = null;
-            }
-        }
-
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if (itemHolding)
+            Debug.Log("Before item holding check");
+            Debug.Log(holdings[0]);
+            if (holdings[0])
             {
-                MovementSM script = itemHolding.GetComponent<MovementSM>();
+                GameObject first = holdings[0];
+                Debug.Log("Thrown");
+                MovementSM script = first.GetComponent<MovementSM>();
                 script.ChangeState(script.thrownState);
-                itemHolding.GetComponent<Rigidbody2D>().simulated = true;
-                itemHolding = itemHolding2;
-                itemHolding2 = itemHolding3;
-                itemHolding4 = null;
+                Debug.Log("Changed state");
+                first.GetComponent<Rigidbody2D>().simulated = true;
+                holdings[0] = holdings[1];
+                holdings[1] = holdings[2];
+                holdings[2] = holdings[3];
+                holdings[3] = null;
             }
         }
     }

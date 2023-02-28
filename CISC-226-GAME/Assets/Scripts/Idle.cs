@@ -14,6 +14,7 @@ public class Idle : BaseState
     public override void Enter()
     {
         base.Enter();
+        // _sm.rigidbody.position += new Vector3()
         //start timer for roam
     }
 
