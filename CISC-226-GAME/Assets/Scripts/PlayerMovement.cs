@@ -41,10 +41,10 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = new Vector2(moveX, moveY).normalized;
         
         //spawns new animal prefab at player
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Instantiate(prefab, rb.position, Quaternion.identity);
-        }
+        // if (Input.GetKeyDown(KeyCode.Mouse0))
+        // {
+        //     Instantiate(prefab, rb.position, Quaternion.identity);
+        // }
 
         
 

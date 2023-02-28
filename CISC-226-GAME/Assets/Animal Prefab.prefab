@@ -46,9 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091b94ea66dff45d0bae6b19c3bfda79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 0}
-  target: {fileID: 0}
-  speed: 10
+  start: {x: 0, y: 0, z: 0}
+  prefab: {fileID: 6651650996837469743, guid: df560d91b5d5dc9408839aa414252710, type: 3}
 --- !u!50 &-5719640612334751605
 Rigidbody2D:
   serializedVersion: 4
