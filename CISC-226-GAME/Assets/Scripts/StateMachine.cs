@@ -38,8 +38,12 @@ public class StateMachine : MonoBehaviour
     }
     private void OnGUI()
     {
-        string content = currentState != null ? currentState.name : "(NA)";
-        GUILayout.Label($"<color='black'><size=40>{content}</size></color>");
+        if ((currentState.name == "Held")|(currentState.name == "Thrown"))
+        {
+            string content = currentState != null ? currentState.name : "(NA)";
+            GUILayout.Label($"<color='black'><size=40>{content}</size></color>");
+        }
+        
     }
 
     protected virtual BaseState GetInitialState()

@@ -10,6 +10,11 @@ public class MovementSM : StateMachine
     public Roaming roamState;
     [HideInInspector]
     public Fleeing fleeState;
+    [HideInInspector]
+    public Held heldState;
+    [HideInInspector]
+    public Thrown thrownState;
+    
     
     [HideInInspector]
     public Rigidbody2D rigidbody;
@@ -20,6 +25,8 @@ public class MovementSM : StateMachine
         idleState = new Idle(this);
         roamState = new Roaming(this);
         fleeState = new Fleeing(this);
+        heldState = new Held(this);
+        thrownState = new Thrown(this);
         rigidbody = GetComponent<Rigidbody2D>();
     }
     protected override BaseState GetInitialState()

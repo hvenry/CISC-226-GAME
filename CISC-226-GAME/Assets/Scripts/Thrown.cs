@@ -24,12 +24,12 @@ public class Thrown : BaseState
 
     public override void UpdateLogic()
     {
-        if (timePassed > 5f)
+        if (timePassed > 2f)
         {
             stateMachine.ChangeState(_sm.idleState);
         }
         timePassed += Time.deltaTime;
-        _sm.rigidbody.transform.position = MathParabola.Parabola(start, worldPosition, 5f, timePassed / 5f);
+        _sm.rigidbody.transform.position = MathParabola.Parabola(start, worldPosition, 2f, timePassed / 2f);
 
         // every x seconds go roam 
     }
