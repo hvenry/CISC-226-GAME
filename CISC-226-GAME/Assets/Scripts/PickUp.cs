@@ -141,27 +141,32 @@ public class PickUp : MonoBehaviour
                 itemHolding = null;
             }
         }
-        
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
             if (itemHolding)
             {
-                Instantiate(animalPrefab,itemHolding.transform.position, Quaternion.identity);
+                Instantiate(animalPrefab, itemHolding.transform.position, Quaternion.identity);
                 Destroy(itemHolding);
             }
-        if (itemHolding2)
-        {
-            Instantiate(animalPrefab,itemHolding.transform.position, Quaternion.identity);
-            Destroy(itemHolding2);
-        }
-        if (itemHolding3)
-        {
-            Instantiate(animalPrefab,itemHolding.transform.position, Quaternion.identity);
-            Destroy(itemHolding3);
-        }
-        if (itemHolding4)
-        {
-            Instantiate(animalPrefab,itemHolding.transform.position, Quaternion.identity);
-            Destroy(itemHolding4);
+
+            if (itemHolding2)
+            {
+                Instantiate(animalPrefab, itemHolding.transform.position, Quaternion.identity);
+                Destroy(itemHolding2);
+            }
+
+            if (itemHolding3)
+            {
+                Instantiate(animalPrefab, itemHolding.transform.position, Quaternion.identity);
+                Destroy(itemHolding3);
+            }
+
+            if (itemHolding4)
+            {
+                Instantiate(animalPrefab, itemHolding.transform.position, Quaternion.identity);
+                Destroy(itemHolding4);
+            }
         }
     }
 
