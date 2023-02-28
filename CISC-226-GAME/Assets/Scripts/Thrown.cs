@@ -19,6 +19,7 @@ public class Thrown : BaseState
         worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         worldPosition += new Vector3(0, 0, 5);
         start = target.position;
+        timePassed = 0f;
 
     }
 

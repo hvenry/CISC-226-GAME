@@ -39,13 +39,10 @@ public class PickUp : MonoBehaviour
             {
                 for (int i = 0; i < holdings.Length;i++)
                 {
-                    Debug.Log(String.Format("Loop: {0} ",i.ToString()));
                     GameObject item = holdings[i];
                     if (item)
                         continue;
                     GameObject temp = pickUpItem.gameObject;
-                    
-                    Debug.Log(String.Format("Holdings: {0}", holdings.ToString()));
                     temp.transform.position = spots[i].position;
                     temp.transform.parent = transform;
                     MovementSM script = temp.GetComponent<MovementSM>();
@@ -62,15 +59,11 @@ public class PickUp : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Debug.Log("Before item holding check");
-            Debug.Log(holdings[0]);
             if (holdings[0])
             {
                 GameObject first = holdings[0];
-                Debug.Log("Thrown");
                 MovementSM script = first.GetComponent<MovementSM>();
                 script.ChangeState(script.thrownState);
-                Debug.Log("Changed state");
                 first.GetComponent<Rigidbody2D>().simulated = true;
                 holdings[0] = holdings[1];
                 holdings[1] = holdings[2];
