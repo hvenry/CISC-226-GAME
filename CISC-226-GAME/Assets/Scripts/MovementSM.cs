@@ -5,16 +5,30 @@ using UnityEngine;
 public class MovementSM : StateMachine
 {
     // Access all our animal states (scripts) inside one script
+    //[HideInInspector]
     public Idle idleState;
+    
+    //[HideInInspector]
     public Roaming roamState;
+    
+    //[HideInInspector]
     public Fleeing fleeState;
+    
+    //[HideInInspector]
     public Held heldState;
+    
+    //[HideInInspector]
     public Thrown thrownState;
+    
+    [HideInInspector]
     public Rigidbody2D rigidbody;
+
+    [HideInInspector]
+    public BoxCollider2D collider2D;
 
     // Hide HideInInspector makes the variables only accessable in the script
     // [HideInInspector]
-    public float speed = 2f;
+    public float speed = 10f;
 
     // Awake always gets called the first time a game object is created in a scene
     private void Awake()
@@ -27,9 +41,11 @@ public class MovementSM : StateMachine
         heldState = new Held(this);
         thrownState = new Thrown(this);
         rigidbody = GetComponent<Rigidbody2D>();
+        collider2D = GetComponent<BoxCollider2D>();
     }
 
     // Override the GetInitialState method to return the initial state of the animal (idleState)
+    // Overrides the fnc in StateMachine
     protected override BaseState GetInitialState()
     {
         return idleState;

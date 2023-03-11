@@ -73,6 +73,7 @@ public class PickUp : MonoBehaviour
         }
     }
 
+    // deprecated 
     IEnumerator ThrowItem(GameObject item)
     {
         Vector3 startPoint = item.transform.position;

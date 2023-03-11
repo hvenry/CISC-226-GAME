@@ -5,6 +5,8 @@ using UnityEngine;
 public class BaseState
 {
     public string name;
+    
+    // reference to the statemachine using this object 
     protected StateMachine stateMachine;
 
     public BaseState(string name, StateMachine stateMachine)

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// This Idle script is the BaseState of the animals
+// This Idle script is the default state of the animals
 public class Idle : BaseState
 {
     // We need to access the animal's state machine to change states
@@ -10,6 +10,10 @@ public class Idle : BaseState
 
     // We need to access the player's position to check if the animal is close enough to flee
     public Transform target;
+    
+    // If the distance is less than a specified threshold value, the animal will change state
+    // to the Flee state
+    public float threshold = 25f;
     public Idle(MovementSM stateMachine) : base("Idle", stateMachine) {
         _sm = stateMachine;
         target = GameObject.FindWithTag("Player").transform;
@@ -32,14 +36,6 @@ public class Idle : BaseState
     // while the state machine is in the state associated with the Idle script (Idle state)
     public override void UpdateLogic()
     {
-        // This method checks the distance between the animal (associated with the state machine) 
-        // and the player.
-        base.UpdateLogic();
-
-        // If the distance is less than a specified threshold value, the animal will change state
-        // to the Flee state
-        float threshold = 25f;
-
         // This is the direction vector from the animal to the player
         Vector2 direction = _sm.rigidbody.position - (Vector2)target.position;
 

@@ -4,6 +4,9 @@ using SuperTiled2Unity.Editor;
 using Unity.Mathematics;
 using UnityEngine;
 
+
+// NO LONGER USED
+// Incorporated into THROWN STATE
 public class Projectile : MonoBehaviour
 {
     private Vector3 start;
