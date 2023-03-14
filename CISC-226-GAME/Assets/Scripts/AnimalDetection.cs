@@ -5,18 +5,14 @@ using UnityEngine;
 public class AnimalDetection : MonoBehaviour
 {
     public string Tag = "";
-    GameObject[] gos;
     
-    private void OnTriggerEnter2D(Collider2D collision)
+    
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        gos = GameObject.FindGameObjectsWithTag(Tag);
-        if (gos.Length == 2)
+        if (GameObject.FindGameObjectsWithTag(Tag).Length == 2)
             {
-                Debug.Log("Text");
-                
+                Debug.Log("Debug logs Pen is full");
             }
-
         
-
     }
 }
