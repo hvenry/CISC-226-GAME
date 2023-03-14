@@ -12,15 +12,22 @@ public class Roaming : BaseState
     
     // distance which the animal starts to flee from player 
     public float threshold = 25f;
+    public Vector2 dir;
     public Roaming(MovementSM stateMachine) : base("Roam", stateMachine) {
         _sm = stateMachine;
         target = GameObject.FindWithTag("Player").transform;
+
     }
 
     public override void Enter()
     {
-        //start timer to idle
+        dir = GetRandDir();
     }
+    //
+    // public override void Exit()
+    // {
+    //     _sm.timer.Stop();
+    // }
 
     public override void UpdateLogic()
     {
@@ -31,7 +38,16 @@ public class Roaming : BaseState
         {
             stateMachine.ChangeState(_sm.fleeState);
         }
-        // every x seconds go idle 
-        // TBC
+        else if (_sm.timeSpent > _sm.roamTimer)
+        {
+            stateMachine.ChangeState(_sm.idleState);
+        }
+        _sm.rigidbody.MovePosition(_sm.rigidbody.position + dir.normalized * Time.deltaTime * _sm.speed);
+
+    }
+
+    private Vector2 GetRandDir()
+    {
+        return new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f));
     }
 }

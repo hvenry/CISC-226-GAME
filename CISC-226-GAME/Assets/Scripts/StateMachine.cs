@@ -7,12 +7,13 @@ public class StateMachine : MonoBehaviour
     // reference to the objects current state
     public BaseState currentState;
 
+    public float timeSpent;
     // Start is called before the first frame update
     void Start()
     {
         // initial state for animals is idle 
         currentState = GetInitialState();
-        
+        timeSpent = 0f;
         // null propagation, will not call if null
         currentState?.Enter();
 
@@ -21,6 +22,7 @@ public class StateMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeSpent += Time.deltaTime;
         // null propagation, will not call if null
         currentState?.UpdateLogic();
     }
@@ -37,6 +39,8 @@ public class StateMachine : MonoBehaviour
         // on change of state, call the outgoing state's exit fnc
         currentState.Exit();
 
+        timeSpent = 0f;
+
         currentState = newState;
         // call new states enter function 
         currentState.Enter();
@@ -44,7 +48,7 @@ public class StateMachine : MonoBehaviour
     private void OnGUI()
     // will be removed, from tutorial code 
     {
-        if ((currentState.name == "Held")|(currentState.name == "Thrown"))
+        if ((currentState.name == "Roam")|(currentState.name == "Thrown"))
         {
             string content = currentState != null ? currentState.name : "(NA)";
             GUILayout.Label($"<color='black'><size=40>{content}</size></color>");

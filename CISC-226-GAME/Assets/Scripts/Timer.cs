@@ -8,31 +8,58 @@ public class Timer : MonoBehaviour
     private float _totalTime;
     private float _timeRemaining;
     private bool _isRunning;
-    private IActionInterface _action;
+    private MonoBehaviour[] _monoBehaviours;
 
-    public Timer(float totalTime, IActionInterface action)
+    public Timer(float totalTime)
     {
         _totalTime = totalTime;
-        _action = action;
+        _timeRemaining = totalTime;
+
     }
 
     private void Start()
     {
+        _monoBehaviours = gameObject.GetComponents<MonoBehaviour>();
         StartCoroutine(DoTimer());
     }
 
-    void Update()
+    public void Set(float time)
     {
-        if (_timeRemaining > 0)
+        Stop();
+        _totalTime = time;
+        _timeRemaining = time;
+        StartCoroutine(DoTimer());
+
+    }
+
+    public void Stop()
+    {
+        StopCoroutine("DoTimer");
+    }
+
+    // void Update()
+    // {
+    //     if (_timeRemaining > 0)
+    //     {
+    //         _timeRemaining -= Time.deltaTime;
+    //     }
+    // }
+    private void CheckExecutableActions()
+    {
+        foreach (MonoBehaviour monoBehaviour in _monoBehaviours)
         {
-            _timeRemaining -= Time.deltaTime;
+            if (monoBehaviour is IActionInterface)
+            {
+                IActionInterface actionableObject = (IActionInterface)monoBehaviour;
+                actionableObject.Execute();
+            }
         }
     }
 
     private IEnumerator DoTimer()
     {
         yield return new WaitForSeconds(_totalTime);
-        _action.Execute();
+        CheckExecutableActions();
         yield return null;
     }
 }

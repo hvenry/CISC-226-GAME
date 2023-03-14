@@ -11,7 +11,7 @@ public class RoamTimerAction: MonoBehaviour, IActionInterface
 
     void Start()
     {
-        script = GetComponent<MovementSM>();
+        script = gameObject.GetComponent<MovementSM>();
     }
 
     public void Execute()
@@ -21,7 +21,7 @@ public class RoamTimerAction: MonoBehaviour, IActionInterface
             script.ChangeState(script.roamState);
         }
 
-        if (script.currentState.name == "Roam")
+        else if (script.currentState.name == "Roam")
         {
             script.ChangeState(script.idleState);
         }

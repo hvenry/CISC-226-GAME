@@ -7,27 +7,45 @@ public class Fleeing : BaseState
     private MovementSM _sm;
     
     // player reference 
-    private Transform target;
+    private Transform _target;
+    
+    //time spent in flee
+    private float _timeInterval = 2f;
+    
+    //radius around player to switch back into Idle
+    private float _threshold = 25f;
     public Fleeing(MovementSM stateMachine) : base("Flee", stateMachine) {
         _sm = stateMachine;
-        target = GameObject.FindWithTag("Player").transform;
+        _target = GameObject.FindWithTag("Player").transform;
     }
 
-    public override void Enter()
-    {
-        // not yet implemented
-        //flee for x seconds START TIMER
-    }
+    // public override void Enter()
+    // {
+    //     _sm.timer.Set(3f);
+    // }
+    //
+    // public override void Exit()
+    // {
+    //     _sm.timer.Stop();
+    // }
 
     public override void UpdateLogic()
     {
         // direction points away from player
-        Vector2 direction = _sm.rigidbody.position - (Vector2)target.position;
+        Vector2 direction = _sm.rigidbody.position - (Vector2)_target.position;
         
         // move animal away from player
         _sm.rigidbody.MovePosition(_sm.rigidbody.position + direction.normalized * Time.deltaTime * _sm.speed);
         
-        //not yet implemented
-        //if timer above threshold return to idle if out of range
+        if (_sm.timeSpent % _timeInterval < 0.1f)
+        {
+            // Debug.Log("inside of timer");
+
+            if (direction.sqrMagnitude > _threshold)
+            {
+                // Debug.Log("Change out of fleeing");
+                stateMachine.ChangeState(_sm.idleState);
+            } 
+        }
     }
 }

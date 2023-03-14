@@ -30,6 +30,10 @@ public class MovementSM : StateMachine
     // [HideInInspector]
     public float speed = 10f;
 
+    public Timer timer;
+    public float roamTimer = 2f;
+
+
     // Awake always gets called the first time a game object is created in a scene
     private void Awake()
     {
@@ -42,6 +46,7 @@ public class MovementSM : StateMachine
         thrownState = new Thrown(this);
         rigidbody = GetComponent<Rigidbody2D>();
         collider2D = GetComponent<BoxCollider2D>();
+        timer = gameObject.AddComponent<Timer>();
     }
 
     // Override the GetInitialState method to return the initial state of the animal (idleState)

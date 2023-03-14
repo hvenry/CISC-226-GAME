@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 225794896}
   - component: {fileID: 225794895}
   - component: {fileID: 225794894}
+  - component: {fileID: 225794898}
   m_Layer: 3
   m_Name: Test_Box (7)
   m_TagString: Untagged
@@ -273,7 +274,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
+  timer: {fileID: 0}
 --- !u!50 &225794895
 Rigidbody2D:
   serializedVersion: 4
@@ -373,6 +376,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &225794898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225794892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce6d5d86bd049f3bc54e54beb4416c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &246132102
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +567,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347916871}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 400d9c824576a42d78bc85bb3c54b435, type: 3}
   m_Name: 
@@ -603,6 +618,7 @@ GameObject:
   - component: {fileID: 878062156}
   - component: {fileID: 878062155}
   - component: {fileID: 878062154}
+  - component: {fileID: 878062158}
   m_Layer: 3
   m_Name: Test_Box (8)
   m_TagString: Untagged
@@ -638,7 +654,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
+  timer: {fileID: 0}
 --- !u!50 &878062155
 Rigidbody2D:
   serializedVersion: 4
@@ -738,6 +756,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &878062158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878062152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce6d5d86bd049f3bc54e54beb4416c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1344212424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1488,6 +1518,7 @@ GameObject:
   - component: {fileID: 1355179476}
   - component: {fileID: 1355179475}
   - component: {fileID: 1355179478}
+  - component: {fileID: 1355179479}
   m_Layer: 3
   m_Name: Test_Box (1)
   m_TagString: Untagged
@@ -1622,7 +1653,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
+  timer: {fileID: 0}
+--- !u!114 &1355179479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355179473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce6d5d86bd049f3bc54e54beb4416c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1365425356
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,6 +2091,7 @@ GameObject:
   - component: {fileID: 1620453651}
   - component: {fileID: 1620453650}
   - component: {fileID: 1620453649}
+  - component: {fileID: 1620453653}
   m_Layer: 3
   m_Name: Test_Box (6)
   m_TagString: Untagged
@@ -2081,7 +2127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
+  timer: {fileID: 0}
 --- !u!50 &1620453650
 Rigidbody2D:
   serializedVersion: 4
@@ -2181,6 +2229,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1620453653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620453647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce6d5d86bd049f3bc54e54beb4416c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1661897152
 GameObject:
   m_ObjectHideFlags: 3
@@ -2357,6 +2417,7 @@ GameObject:
   - component: {fileID: 1832721302}
   - component: {fileID: 1832721301}
   - component: {fileID: 1832721300}
+  - component: {fileID: 1832721304}
   m_Layer: 3
   m_Name: Test_Box (4)
   m_TagString: Untagged
@@ -2392,7 +2453,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
+  timer: {fileID: 0}
 --- !u!50 &1832721301
 Rigidbody2D:
   serializedVersion: 4
@@ -2492,6 +2555,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1832721304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832721298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce6d5d86bd049f3bc54e54beb4416c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1916659924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2505,6 +2580,7 @@ GameObject:
   - component: {fileID: 1916659928}
   - component: {fileID: 1916659927}
   - component: {fileID: 1916659926}
+  - component: {fileID: 1916659930}
   m_Layer: 3
   m_Name: Test_Box (9)
   m_TagString: Untagged
@@ -2540,7 +2616,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
+  timer: {fileID: 0}
 --- !u!50 &1916659927
 Rigidbody2D:
   serializedVersion: 4
@@ -2640,6 +2718,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1916659930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916659924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce6d5d86bd049f3bc54e54beb4416c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1949135522
 GameObject:
   m_ObjectHideFlags: 0
@@ -2694,7 +2784,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 2
+  timer: {fileID: 0}
 --- !u!1 &2021993459
 GameObject:
   m_ObjectHideFlags: 0
@@ -2708,6 +2800,7 @@ GameObject:
   - component: {fileID: 2021993462}
   - component: {fileID: 2021993461}
   - component: {fileID: 2021993464}
+  - component: {fileID: 2021993465}
   m_Layer: 3
   m_Name: Test_Box (3)
   m_TagString: Untagged
@@ -2842,7 +2935,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
+  timer: {fileID: 0}
+--- !u!114 &2021993465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021993459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce6d5d86bd049f3bc54e54beb4416c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2100481594
 GameObject:
   m_ObjectHideFlags: 0
@@ -2856,6 +2963,7 @@ GameObject:
   - component: {fileID: 2100481597}
   - component: {fileID: 2100481596}
   - component: {fileID: 2100481599}
+  - component: {fileID: 2100481600}
   m_Layer: 3
   m_Name: Test_Box (2)
   m_TagString: Untagged
@@ -2990,7 +3098,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
+  timer: {fileID: 0}
+--- !u!114 &2100481600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100481594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce6d5d86bd049f3bc54e54beb4416c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2104493697
 GameObject:
   m_ObjectHideFlags: 0
@@ -3004,6 +3126,7 @@ GameObject:
   - component: {fileID: 2104493701}
   - component: {fileID: 2104493700}
   - component: {fileID: 2104493699}
+  - component: {fileID: 2104493703}
   m_Layer: 3
   m_Name: Test_Box (5)
   m_TagString: Untagged
@@ -3039,7 +3162,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
+  timer: {fileID: 0}
 --- !u!50 &2104493700
 Rigidbody2D:
   serializedVersion: 4
@@ -3139,3 +3264,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2104493703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104493697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce6d5d86bd049f3bc54e54beb4416c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

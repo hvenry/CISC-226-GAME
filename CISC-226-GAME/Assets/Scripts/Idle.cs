@@ -17,20 +17,21 @@ public class Idle : BaseState
     public Idle(MovementSM stateMachine) : base("Idle", stateMachine) {
         _sm = stateMachine;
         target = GameObject.FindWithTag("Player").transform;
+
     }
 
     // Enter() is called when the state machine enters the state associated with the Idle script,
     // using this we can possibly play an idle animation on the animal, or play a sound when its
     // idle (not necessary but we could do it)
-    public override void Enter()
-    {
-        base.Enter();
-
-        // ?? NOT IMPLEMENTED YET ??
-        
-        // _sm.rigidbody.position += new Vector3()
-        //start timer for roam
-    }
+    // public override void Enter()
+    // {
+    //     //_sm.timer.Set(3f);
+    // }
+    //
+    // public override void Exit()
+    // {
+    //     // _sm.timer.Stop();
+    // }
 
     // This method is defined in the BaseState class, and is called every frame of the game loop,
     // while the state machine is in the state associated with the Idle script (Idle state)
@@ -44,9 +45,11 @@ public class Idle : BaseState
         {
             stateMachine.ChangeState(_sm.fleeState);
         }
-
-        // ?? NOT IMPLEMENTED YET ??
+        else if (_sm.timeSpent > _sm.roamTimer)
+        {
+            stateMachine.ChangeState(_sm.roamState);
+        }
         
-        // every x seconds go roam 
     }
+    
 }
