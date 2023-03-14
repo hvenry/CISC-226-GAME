@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80834169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.34, z: 0}
+  m_LocalPosition: {x: 0, y: 1.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -273,6 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
 --- !u!50 &225794895
 Rigidbody2D:
@@ -638,6 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
 --- !u!50 &878062155
 Rigidbody2D:
@@ -1622,6 +1624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
 --- !u!1 &1365425356
 GameObject:
@@ -2081,6 +2084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
 --- !u!50 &1620453650
 Rigidbody2D:
@@ -2392,6 +2396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
 --- !u!50 &1832721301
 Rigidbody2D:
@@ -2540,6 +2545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
 --- !u!50 &1916659927
 Rigidbody2D:
@@ -2694,6 +2700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 2
 --- !u!1 &2021993459
 GameObject:
@@ -2842,6 +2849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
 --- !u!1 &2100481594
 GameObject:
@@ -2990,6 +2998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
 --- !u!1 &2104493697
 GameObject:
@@ -3039,6 +3048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  collider2D: {fileID: 0}
   speed: 6
 --- !u!50 &2104493700
 Rigidbody2D:
