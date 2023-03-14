@@ -13,6 +13,8 @@ public class PenCollision : MonoBehaviour
             Physics2D.IgnoreCollision( collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }
         
+        
+
     } 
 
 }
