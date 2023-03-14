@@ -5,23 +5,14 @@ using System.Collections;
 
 public class PenCollision : MonoBehaviour
 {
-    public string allowedTag;
-    public Transform Pig;
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Pig"))
-        {
-            Physics.IgnoreCollision(Pig.GetComponent<Collider>(), GetComponent<Collider>());
+    
+    public string TagToIgnore = "Pig";
+     
+    void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.tag == TagToIgnore ){
+            Physics2D.IgnoreCollision( collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }
-        else
-        {
-            // Object does not have the allowed tag, block it from entering the pen
-            Rigidbody rb = other.GetComponent<Rigidbody>();
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-            Debug.Log("Object blocked from entering pen.");
-        }
-    }
+    } 
 
 }
 
