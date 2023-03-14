@@ -4,45 +4,57 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
-    private BaseState currentState;
+    // reference to the objects current state
+    public BaseState currentState;
 
     // Start is called before the first frame update
     void Start()
     {
+        // initial state for animals is idle 
         currentState = GetInitialState();
-        if (currentState != null)
-            currentState.Enter();
+        
+        // null propagation, will not call if null
+        currentState?.Enter();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentState != null)
-            currentState.UpdateLogic();
+        // null propagation, will not call if null
+        currentState?.UpdateLogic();
     }
 
 
     void LateUpdate()
     {
-        if (currentState != null)
-            currentState.UpdatePhysics();
+        // null propagation, will not call if null
+        currentState?.UpdatePhysics();
     }
 
     public void ChangeState(BaseState newState)
     {
+        // on change of state, call the outgoing state's exit fnc
         currentState.Exit();
 
         currentState = newState;
+        // call new states enter function 
         currentState.Enter();
     }
     private void OnGUI()
+    // will be removed, from tutorial code 
     {
-        string content = currentState != null ? currentState.name : "(NA)";
-        GUILayout.Label($"<color='black'><size=40>{content}</size></color>");
+        if ((currentState.name == "Held")|(currentState.name == "Thrown"))
+        {
+            string content = currentState != null ? currentState.name : "(NA)";
+            GUILayout.Label($"<color='black'><size=40>{content}</size></color>");
+        }
+        
     }
 
     protected virtual BaseState GetInitialState()
+    // default function, gets overriden and initial state for animals is idle
+    // see MovementSM fnc
     {
         return null;
     }
