@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 225794894}
   m_Layer: 3
   m_Name: Test_Box (7)
-  m_TagString: Untagged
+  m_TagString: Cow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -921,7 +921,7 @@ GameObject:
   - component: {fileID: 878062154}
   m_Layer: 3
   m_Name: Test_Box (8)
-  m_TagString: Untagged
+  m_TagString: Hog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2472,7 +2472,7 @@ GameObject:
   - component: {fileID: 1620453649}
   m_Layer: 3
   m_Name: Test_Box (6)
-  m_TagString: Untagged
+  m_TagString: Cow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3282,7 +3282,7 @@ GameObject:
   - component: {fileID: 2021993464}
   m_Layer: 3
   m_Name: Test_Box (3)
-  m_TagString: Untagged
+  m_TagString: Hog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3431,7 +3431,7 @@ GameObject:
   - component: {fileID: 2100481599}
   m_Layer: 3
   m_Name: Test_Box (2)
-  m_TagString: Untagged
+  m_TagString: Cow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
