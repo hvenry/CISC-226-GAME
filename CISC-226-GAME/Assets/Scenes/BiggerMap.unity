@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 74817632}
   - component: {fileID: 74817633}
+  - component: {fileID: 74817634}
   m_Layer: 0
   m_Name: PenHog
   m_TagString: Hog
@@ -168,7 +169,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2203511, y: 0.820004}
+  m_Offset: {x: 0.24649692, y: 0.91151357}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -179,8 +180,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.6535625, y: 3.493081}
+  m_Size: {x: 5.385637, y: 4.7219205}
   m_EdgeRadius: 0
+--- !u!114 &74817634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74817631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3bba3f7c1e112849b2df6dc83033c66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TagToIgnore: Hog
 --- !u!1 &80834169
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 655706873}
   - component: {fileID: 655706874}
+  - component: {fileID: 655706875}
   m_Layer: 0
   m_Name: PenCow
   m_TagString: Cow
@@ -793,7 +808,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4057064, y: 0.48684692}
+  m_Offset: {x: 0.4400735, y: 0.46393555}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -804,8 +819,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.5702095, y: 3.312523}
+  m_Size: {x: 5.372102, y: 4.641374}
   m_EdgeRadius: 0
+--- !u!114 &655706875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655706872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3bba3f7c1e112849b2df6dc83033c66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TagToIgnore: Cow
 --- !u!1 &843474096
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 843474097}
   - component: {fileID: 843474098}
+  - component: {fileID: 843474099}
   m_Layer: 0
   m_Name: PenPig (1)
   m_TagString: Pig
@@ -851,7 +880,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.18223, y: 0.21438885}
+  m_Offset: {x: -0.18223047, y: 0.24752235}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -862,8 +891,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.7089205, y: 3.486906}
+  m_Size: {x: 5.305331, y: 4.4809227}
   m_EdgeRadius: 0
+--- !u!114 &843474099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843474096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3bba3f7c1e112849b2df6dc83033c66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TagToIgnore: Pig
 --- !u!1 &878062152
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,6 +2361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1527339000}
   - component: {fileID: 1527339001}
+  - component: {fileID: 1527339002}
   m_Layer: 0
   m_Name: PenCow (1)
   m_TagString: Cow
@@ -2354,7 +2397,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4057064, y: 0.48684692}
+  m_Offset: {x: 0.4220066, y: 0.6009493}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2365,8 +2408,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.5702095, y: 3.312523}
+  m_Size: {x: 5.2548294, y: 4.518759}
   m_EdgeRadius: 0
+--- !u!114 &1527339002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527338999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3bba3f7c1e112849b2df6dc83033c66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TagToIgnore: Cow
 --- !u!1 &1569511192
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,7 +2840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3bba3f7c1e112849b2df6dc83033c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowedTag: Pig
+  TagToIgnore: Pig
 --- !u!1 &1832721298
 GameObject:
   m_ObjectHideFlags: 0
@@ -2944,6 +3000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1858843229}
   - component: {fileID: 1858843230}
+  - component: {fileID: 1858843231}
   m_Layer: 0
   m_Name: PenHog (1)
   m_TagString: Hog
@@ -2979,7 +3036,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2203511, y: 0.820004}
+  m_Offset: {x: 0.2726426, y: 0.83307695}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2990,8 +3047,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.6535625, y: 3.493081}
+  m_Size: {x: 5.3856363, y: 4.669629}
   m_EdgeRadius: 0
+--- !u!114 &1858843231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858843228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3bba3f7c1e112849b2df6dc83033c66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TagToIgnore: Hog
 --- !u!1 &1916659924
 GameObject:
   m_ObjectHideFlags: 0
