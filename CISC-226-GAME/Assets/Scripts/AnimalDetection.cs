@@ -6,10 +6,9 @@ public class AnimalDetection : MonoBehaviour
 {
     public string Tag = "";
     
-    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (GameObject.FindGameObjectsWithTag(Tag).Length == 2)
+        if (GameObject.FindGameObjectsWithTag(Tag).Length > 2)
             {
                 Debug.Log("Debug logs Pen is full");
             }

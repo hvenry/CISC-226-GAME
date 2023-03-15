@@ -31,7 +31,7 @@ public class PickUp : MonoBehaviour
         //         item.transform.position = spots[i].position;
         //     }
         // }
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Collider2D pickUpItem = Physics2D.OverlapCircle(transform.position + Direction, .4f, pickUpMask);
 
