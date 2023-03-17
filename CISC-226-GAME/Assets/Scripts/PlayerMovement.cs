@@ -14,12 +14,17 @@ public class PlayerMovement : MonoBehaviour
     public PickUp pickUp;
     private Vector2 moveDirection;
 
+    // animator component
+    public Animator animator;
+
     // Update is called once per frame
     void Update()
     {
         ProcessInputs();
         pickUp = gameObject.GetComponent<PickUp>();
         pickUp.Direction = new Vector2(0, -1);
+
+
     }
 
     // fixed update is called a set amount of times per update loop (unlike frames)
@@ -34,6 +39,11 @@ public class PlayerMovement : MonoBehaviour
         // GetAxisRaw gives us a 0 or 1
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("Horizontal", moveX);
+        animator.SetFloat("Vertical", moveY);
+        animator.SetFloat("Speed", new Vector2(moveX, moveY).sqrMagnitude);
+
 
         // create vector with moveX, moveY
         // we use .normalized so our vectors do not stack in non-cardinal directions
