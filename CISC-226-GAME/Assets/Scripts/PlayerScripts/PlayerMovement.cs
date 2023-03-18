@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
+        // animator component
         animator.SetFloat("Horizontal", moveX);
         animator.SetFloat("Vertical", moveY);
         animator.SetFloat("Speed", new Vector2(moveX, moveY).sqrMagnitude);

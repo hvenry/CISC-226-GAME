@@ -36,7 +36,7 @@ public class PickUp : MonoBehaviour
        
        if (Input.GetKeyDown(KeyCode.Mouse1))
        {
-           Collider2D pickUpItem = Physics2D.OverlapCircle(transform.position , 1f, pickUpMask);
+           Collider2D pickUpItem = Physics2D.OverlapCircle(transform.position , 2f, pickUpMask);
            
            if (pickUpItem)
            {
