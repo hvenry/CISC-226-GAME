@@ -8,6 +8,7 @@ TagManager:
   - Pig
   - Cow
   - Hog
+  - Camel
   layers:
   - Default
   - TransparentFX
