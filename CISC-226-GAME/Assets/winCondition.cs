@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class winCondition : MonoBehaviour
 {
+    
     private GameObject[] loose;
 
     private GameObject[] safe;
@@ -22,8 +23,15 @@ public class winCondition : MonoBehaviour
         loose = loose.Concat(GameObject.FindGameObjectsWithTag("Hog")).ToArray();
         loose = loose.Concat(GameObject.FindGameObjectsWithTag("Camel")).ToArray();
         total = loose.Length;
+        timeRemaining = 400f;
+        EventManager.onSafe += Switch;
     }
 
+    void Switch(float id)
+    {
+        
+    }
+    
     // Update is called once per frame
     void Update()
     {

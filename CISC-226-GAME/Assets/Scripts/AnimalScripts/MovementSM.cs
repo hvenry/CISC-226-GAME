@@ -26,6 +26,8 @@ public class MovementSM : StateMachine
     [HideInInspector]
     public BoxCollider2D collider2D;
 
+    public float id;
+
     // Hide HideInInspector makes the variables only accessable in the script
     // [HideInInspector]
     public float speed = 10f;
