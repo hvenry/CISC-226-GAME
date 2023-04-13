@@ -1,30 +1,27 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
 public class winCondition : MonoBehaviour
 {
-    private GameObject[] cows;
-
-    private GameObject[] pigs;
-
-    private GameObject[] hogs;
-
-    private GameObject[] chickens;
+    private GameObject[] loose;
 
     private GameObject[] safe;
 
     private float timeRemaining;
+
+    private float total;
     // Start is called before the first frame update
     void Start()
     {
-        cows = GameObject.FindGameObjectsWithTag("Cow");
-        pigs = GameObject.FindGameObjectsWithTag("Pig");
-        hogs = GameObject.FindGameObjectsWithTag("Hog");
-        chickens = GameObject.FindGameObjectsWithTag("Chicken");
-        timeRemaining = 400f;
+        loose = loose.Concat(GameObject.FindGameObjectsWithTag("Cow")).ToArray();
+        loose = loose.Concat(GameObject.FindGameObjectsWithTag("Pig")).ToArray();
+        loose = loose.Concat(GameObject.FindGameObjectsWithTag("Hog")).ToArray();
+        loose = loose.Concat(GameObject.FindGameObjectsWithTag("Camel")).ToArray();
+        total = loose.Length;
     }
 
     // Update is called once per frame
@@ -49,16 +46,11 @@ public class winCondition : MonoBehaviour
 
     bool Won()
     {
-        return (cows.Length == 0 & pigs.Length == 0 & hogs.Length == 0 & chickens.Length == 0);
+        return (loose.Length == 0);
     }
 
     bool Lost()
     {
-        if (timeRemaining <= 0)
-        {
-            return true;
-        }
-
-        return false;
+        return timeRemaining <= 0;
     }
 }
