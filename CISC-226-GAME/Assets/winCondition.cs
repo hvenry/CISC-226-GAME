@@ -7,13 +7,12 @@ using UnityEngine;
 
 public class winCondition : MonoBehaviour
 {
-<<<<<<< Updated upstream
     
     private GameObject[] loose;
 
     private GameObject[] safe;
 
-    private float timeRemaining;
+    private float timeRemaining = 400f;
 
     private float total;
     // Start is called before the first frame update
@@ -24,25 +23,7 @@ public class winCondition : MonoBehaviour
         loose = loose.Concat(GameObject.FindGameObjectsWithTag("Hog")).ToArray();
         loose = loose.Concat(GameObject.FindGameObjectsWithTag("Camel")).ToArray();
         total = loose.Length;
-        timeRemaining = 400f;
-        EventManager.onSafe += Switch;
-=======
-    private GameObject[] cows;
-    private GameObject[] pigs;
-    private GameObject[] hogs;
-    private GameObject[] chickens;
-    private GameObject[] safe;
-
-    private float timeRemaining = 120f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        cows = GameObject.FindGameObjectsWithTag("Cow");
-        Debug.Log(cows);
-        pigs = GameObject.FindGameObjectsWithTag("Pig");
-        hogs = GameObject.FindGameObjectsWithTag("Hog");
-        chickens = GameObject.FindGameObjectsWithTag("Chicken");
->>>>>>> Stashed changes
+        // EventManager.onSafe += Switch;
     }
 
     void Switch(float id)
@@ -95,14 +76,7 @@ public class winCondition : MonoBehaviour
 
     bool Won()
     {
-<<<<<<< Updated upstream
         return (loose.Length == 0);
-=======
-        return (cows == null || cows.Length == 0) && 
-            (pigs == null || pigs.Length == 0) && 
-            (hogs == null || hogs.Length == 0) && 
-            (chickens == null || chickens.Length == 0);
->>>>>>> Stashed changes
     }
 
     bool Lost()
