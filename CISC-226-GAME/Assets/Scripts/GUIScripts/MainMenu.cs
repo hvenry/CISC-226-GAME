@@ -16,6 +16,18 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("BiggerMap");
     }
 
+    public void LoadLevel2(){
+        // load level 2
+        SceneManager.LoadScene("BiggerMap 2");
+    }
+
+    
+    public void LoadLevel3(){
+        // load level 3
+        SceneManager.LoadScene("BiggerMap 3");
+    }
+
+
     // public void GoToLevelSelect(){
     //     SceneManager.LoadScene("LevelSelect");
     // }
