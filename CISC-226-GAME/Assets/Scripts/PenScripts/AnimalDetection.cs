@@ -13,7 +13,7 @@ public class AnimalDetection : MonoBehaviour
     {
         if (GameObject.FindGameObjectsWithTag(Tag).Length > 2)
             {
-                Debug.Log("Debug logs Pen is full");
+                // Debug.Log("Debug logs Pen is full");
             }
 
         // EventManager.onSafe(2);

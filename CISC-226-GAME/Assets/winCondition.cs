@@ -15,37 +15,24 @@ public class winCondition : MonoBehaviour
 
     private float timeRemaining = 400f;
 
-    private int total;
+    private int total = 0;
 
     private int safeLength = 0;
     // Start is called before the first frame update
     void Start()
     {
         
-        Debug.Log("Win Condition start");
-        loose = loose.Concat(GameObject.FindGameObjectsWithTag("Cow")).ToArray();
-        loose = loose.Concat(GameObject.FindGameObjectsWithTag("Pig")).ToArray();
-        loose = loose.Concat(GameObject.FindGameObjectsWithTag("Hog")).ToArray();
-        loose = loose.Concat(GameObject.FindGameObjectsWithTag("Camel")).ToArray();
-        total = loose.Length;
-        Debug.Log(String.Format("Length of loose: {0}, Loose[0] is type of: {1}", total, loose[0].GetType()));
-        EventManager.onSafe += Switch;
-        for (int i = 0; i < loose.Length; i++)
-        {
-            Debug.Log(String.Format("ID: {0}, Object: {1}", i, loose[i]));
-            MovementSM x = loose[i].GetComponent<MovementSM>();
-            Debug.Log(String.Format("MovementSM: {0}, Speed: {1}", x, x.speed));
-            loose[i].GetComponent<MovementSM>().id = i;
-        }
-
-        safe = new GameObject[loose.Length];
+        // Debug.Log("Win Condition start");
+       Invoke("DelayedStart",1);
     }
 
     void Switch(int id)
     {
         Debug.Log(String.Format("OnSafe called id: {0}",id));
+        
         safe[id] = loose[id];
         safeLength++;
+        Debug.Log(String.Format("Length of loose: {0}, safe: {1}. total: {2}",loose.Length, safeLength,total));
         
     }
     
@@ -53,8 +40,8 @@ public class winCondition : MonoBehaviour
     void Update()
     {
         timeRemaining -= Time.deltaTime;
-
-        if (Won())
+        
+        if (Won() && total != 0)
         {
             Debug.Log("WON GAME");
             //Trigger end game (WIN)
@@ -67,7 +54,25 @@ public class winCondition : MonoBehaviour
         }
     }
 
+    private void DelayedStart()
+    {
+        loose = loose.Concat(GameObject.FindGameObjectsWithTag("Cow")).ToArray();
+        loose = loose.Concat(GameObject.FindGameObjectsWithTag("Pig")).ToArray();
+        loose = loose.Concat(GameObject.FindGameObjectsWithTag("Hog")).ToArray();
+        loose = loose.Concat(GameObject.FindGameObjectsWithTag("Camel")).ToArray();
+        total = loose.Length;
+        Debug.Log(String.Format("Length of loose: {0}, Loose[0] is type of: {1}", total, loose[0].GetType()));
+        EventManager.onSafe += Switch;
+        for (int i = 0; i < loose.Length; i++)
+        {
+            Debug.Log(String.Format("ID: {0}, Object: {1}", i, loose[i]));
+            MovementSM x = loose[i].GetComponent<MovementSM>();
+            // Debug.Log(String.Format("MovementSM: {0}, Speed: {1}", x, x.speed));
+            loose[i].GetComponent<MovementSM>().id = i;
+        }
 
+        safe = new GameObject[loose.Length];
+    }
 
     private void OnGUI()
     {
