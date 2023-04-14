@@ -9,6 +9,8 @@ TagManager:
   - Cow
   - Hog
   - Camel
+  - Chicken
+  - MenuMusic
   layers:
   - Default
   - TransparentFX
