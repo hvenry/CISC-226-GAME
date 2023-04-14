@@ -363,8 +363,9 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
-  spawnPositions:
-  - {x: -17, y: 9}
+  numberofPrefabs: 2
+  corner1: {x: -20, y: -6}
+  corner2: {x: -13, y: -11}
 --- !u!1 &227579920
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,7 +528,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385793560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.1, y: 10.16, z: 0.09358357}
+  m_LocalPosition: {x: 22.14, y: -13.85, z: 0.09358357}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1950,8 +1951,9 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
-  spawnPositions:
-  - {x: 14, y: 10}
+  numberofPrefabs: 2
+  corner1: {x: 15, y: -5}
+  corner2: {x: 22, y: -3}
 --- !u!1 &1243430325
 GameObject:
   m_ObjectHideFlags: 3
@@ -3326,8 +3328,9 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
-  spawnPositions:
-  - {x: -17, y: -12}
+  numberofPrefabs: 2
+  corner1: {x: 10, y: 16}
+  corner2: {x: 18, y: 10}
 --- !u!1001 &1650241975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3595,8 +3598,9 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
-  spawnPositions:
-  - {x: 17, y: -2}
+  numberofPrefabs: 2
+  corner1: {x: -19, y: 15}
+  corner2: {x: -13, y: 8}
 --- !u!1 &1858843228
 GameObject:
   m_ObjectHideFlags: 0
