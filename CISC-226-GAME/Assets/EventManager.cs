@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    public delegate float OnSafe(float id);
+    public delegate void OnSafe(int id);
 
-    public static event OnSafe onSafe; 
+    public static OnSafe onSafe; 
     
     // Start is called before the first frame update
     void Start()

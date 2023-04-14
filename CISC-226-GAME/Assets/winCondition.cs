@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -14,7 +15,9 @@ public class winCondition : MonoBehaviour
 
     private float timeRemaining;
 
-    private float total;
+    private int total;
+
+    private int safeLength = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,11 +28,18 @@ public class winCondition : MonoBehaviour
         total = loose.Length;
         timeRemaining = 400f;
         EventManager.onSafe += Switch;
+        for (int i = 0; i < loose.Length; i++)
+        {
+            loose[i].GetComponent<MovementSM>().id = i;
+        }
+
+        safe = new GameObject[loose.Length];
     }
 
-    void Switch(float id)
+    void Switch(int id)
     {
-        
+        safe[id] = loose[id];
+        safeLength++;
     }
     
     // Update is called once per frame
@@ -54,7 +64,7 @@ public class winCondition : MonoBehaviour
 
     bool Won()
     {
-        return (loose.Length == 0);
+        return (loose.Length == safeLength);
     }
 
     bool Lost()
