@@ -9,11 +9,11 @@ using UnityEngine;
 public class winCondition : MonoBehaviour
 {
     
-    private GameObject[] loose;
+    private GameObject[] loose = Array.Empty<GameObject>();
 
     private GameObject[] safe;
 
-    private float timeRemaining;
+    private float timeRemaining = 400f;
 
     private int total;
 
@@ -21,15 +21,20 @@ public class winCondition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+        Debug.Log("Win Condition start");
         loose = loose.Concat(GameObject.FindGameObjectsWithTag("Cow")).ToArray();
         loose = loose.Concat(GameObject.FindGameObjectsWithTag("Pig")).ToArray();
         loose = loose.Concat(GameObject.FindGameObjectsWithTag("Hog")).ToArray();
         loose = loose.Concat(GameObject.FindGameObjectsWithTag("Camel")).ToArray();
         total = loose.Length;
-        timeRemaining = 400f;
+        Debug.Log(String.Format("Length of loose: {0}, Loose[0] is type of: {1}", total, loose[0].GetType()));
         EventManager.onSafe += Switch;
         for (int i = 0; i < loose.Length; i++)
         {
+            Debug.Log(String.Format("ID: {0}, Object: {1}", i, loose[i]));
+            MovementSM x = loose[i].GetComponent<MovementSM>();
+            Debug.Log(String.Format("MovementSM: {0}, Speed: {1}", x, x.speed));
             loose[i].GetComponent<MovementSM>().id = i;
         }
 
@@ -38,8 +43,10 @@ public class winCondition : MonoBehaviour
 
     void Switch(int id)
     {
+        Debug.Log(String.Format("OnSafe called id: {0}",id));
         safe[id] = loose[id];
         safeLength++;
+        
     }
     
     // Update is called once per frame
@@ -48,6 +55,7 @@ public class winCondition : MonoBehaviour
         timeRemaining -= Time.deltaTime;
         if (Won())
         {
+            Debug.Log("WON GAME");
             //Trigger end game (WIN)
         }
 

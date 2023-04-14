@@ -69,10 +69,29 @@ public class PickUp : MonoBehaviour
                MovementSM script = first.GetComponent<MovementSM>();
                script.ChangeState(script.thrownState);
                first.GetComponent<Rigidbody2D>().simulated = true;
+               
                holdings[0] = holdings[1];
+               
+               if (holdings[0] is not null)
+               {
+                   holdings[0].transform.position = spots[0].position;
+               }
+               
                holdings[1] = holdings[2];
+               
+               if (holdings[1] is not null)
+               {
+                   holdings[1].transform.position = spots[1].position;
+               }
+               
                holdings[2] = holdings[3];
+               
+               if (holdings[2] is not null)
+               {
+                   holdings[2].transform.position = spots[2].position;
+               }
                holdings[3] = null;
+               
            }
        }
    }

@@ -26,7 +26,7 @@ public class MovementSM : StateMachine
     [HideInInspector]
     public BoxCollider2D collider2D;
 
-    public int id;
+    public int id = new int();
 
     // Hide HideInInspector makes the variables only accessable in the script
     // [HideInInspector]
