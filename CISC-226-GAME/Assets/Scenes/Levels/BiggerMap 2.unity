@@ -675,8 +675,9 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
-  spawnPositions:
-  - {x: -18, y: -21}
+  numberofPrefabs: 1
+  corner1: {x: 16, y: -21}
+  corner2: {x: 23, y: -27}
 --- !u!1 &391295357
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,8 +847,9 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
-  spawnPositions:
-  - {x: -12, y: 10}
+  numberofPrefabs: 1
+  corner1: {x: 16, y: 9}
+  corner2: {x: 23, y: 2}
 --- !u!1 &655706872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,8 +1509,9 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
-  spawnPositions:
-  - {x: 20, y: 9}
+  numberofPrefabs: 1
+  corner1: {x: -2, y: 17}
+  corner2: {x: 4, y: 13}
 --- !u!4 &977166596
 Transform:
   m_ObjectHideFlags: 0
@@ -2829,8 +2832,40 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
-  spawnPositions:
-  - {x: -10, y: -20}
+  numberofPrefabs: 1
+  corner1: {x: -19, y: -1}
+  corner2: {x: -13, y: -6}
+--- !u!1 &1709825234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1709825235}
+  m_Layer: 0
+  m_Name: TEST
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1709825235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709825234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.77, y: -27.45, z: 0.03675901}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1783169670
 GameObject:
   m_ObjectHideFlags: 0
