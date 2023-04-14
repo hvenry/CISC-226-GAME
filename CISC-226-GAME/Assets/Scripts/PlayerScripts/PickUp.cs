@@ -17,11 +17,12 @@ public class PickUp : MonoBehaviour
    public GameObject destroyEffect;
    public Vector3 Direction { get; set; }
    private GameObject[] holdings = new GameObject[4];
-
+   private AudioSource error;
 
    void Start()
    {
        spots = new Transform[] { holdSpot, holdSpot2, holdSpot3, holdSpot4 };
+       error = GetComponent<AudioSource>();
    }
    void Update()
    {
@@ -40,23 +41,39 @@ public class PickUp : MonoBehaviour
            
            if (pickUpItem)
            {
-               for (int i = 0; i < holdings.Length;i++)
+               bool allowed = true;
+               for (int i = 0; i < holdings.Length; i++)
                {
-                   GameObject item = holdings[i];
-                   if (item)
-                       continue;
-                   GameObject temp = pickUpItem.gameObject;
-                   temp.transform.position = spots[i].position;
-                   temp.transform.parent = transform;
-                   MovementSM script = temp.GetComponent<MovementSM>();
-                   script.ChangeState(script.heldState);
-                   temp.GetComponent<Rigidbody2D>().simulated = false;
-                   holdings[i] = temp;
-                   break;
-
+                   if (holdings[i] is not null && 
+                       holdings[i].GetComponent<MovementSM>().weight < pickUpItem.GetComponent<MovementSM>().weight)
+                       allowed = false;
 
                }
-              
+
+               if (allowed)
+               {
+                   for (int i = 0; i < holdings.Length; i++)
+                   {
+                       GameObject item = holdings[i];
+                       if (item)
+                           continue;
+                       GameObject temp = pickUpItem.gameObject;
+                       temp.transform.position = spots[i].position;
+                       temp.transform.parent = transform;
+                       MovementSM script = temp.GetComponent<MovementSM>();
+                       script.ChangeState(script.heldState);
+                       temp.GetComponent<Rigidbody2D>().simulated = false;
+                       holdings[i] = temp;
+                       break;
+
+
+                   }
+               }
+               else
+               {
+                   //play sound 
+                   error.Play();
+               }
            }
           
        }

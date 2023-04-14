@@ -34,6 +34,7 @@ public class MovementSM : StateMachine
 
     public Timer timer;
     public float roamTimer = 2f;
+    public int weight;
 
 
     // Awake always gets called the first time a game object is created in a scene
