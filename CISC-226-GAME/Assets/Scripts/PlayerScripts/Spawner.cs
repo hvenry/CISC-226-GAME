@@ -25,9 +25,9 @@ public class Spawner : MonoBehaviour
         {
             Vector2 spawnPosition = GetRandomPosition();
             Instantiate(Chicken_Prefab, spawnPosition, Quaternion.identity);
-            Instantiate(Cow_Prefab, spawnPosition, Quaternion.identity);
-            Instantiate(Hog_Prefab, spawnPosition, Quaternion.identity);
-            Instantiate(Pig_Prefab, spawnPosition, Quaternion.identity);
+            //Instantiate(Cow_Prefab, spawnPosition, Quaternion.identity);
+            //Instantiate(Hog_Prefab, spawnPosition, Quaternion.identity);
+            //Instantiate(Pig_Prefab, spawnPosition, Quaternion.identity);
         }
     }
 
