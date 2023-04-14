@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/LevelSelect.unity
     guid: 0abc1df520baa1b44bee94c500018e0e
+  - enabled: 1
+    path: Assets/Scenes/Levels/BiggerMap 3.unity
+    guid: 2576c545bb4c9fb46b809bcc849fb325
+  - enabled: 1
+    path: Assets/Scenes/Levels/BiggerMap 2.unity
+    guid: c9118fbffc0ed6648a0ab0d0fe9dde05
   m_configObjects: {}
