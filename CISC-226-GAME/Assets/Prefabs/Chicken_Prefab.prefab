@@ -153,3 +153,4 @@ MonoBehaviour:
   speed: 18
   timer: {fileID: 0}
   roamTimer: 2
+  weight: 1
