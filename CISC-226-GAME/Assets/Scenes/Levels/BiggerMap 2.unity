@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 74817635}
   m_Layer: 0
   m_Name: PenHog
-  m_TagString: Hog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -378,6 +378,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -530,6 +531,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -643,7 +645,7 @@ GameObject:
   - component: {fileID: 227579921}
   m_Layer: 0
   m_Name: Pig
-  m_TagString: Pig
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -845,6 +847,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -958,7 +961,7 @@ GameObject:
   - component: {fileID: 453827637}
   m_Layer: 0
   m_Name: Cow
-  m_TagString: Cow
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1045,6 +1048,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -1210,6 +1214,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -1326,7 +1331,7 @@ GameObject:
   - component: {fileID: 655706876}
   m_Layer: 0
   m_Name: PenCow
-  m_TagString: Cow
+  m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1768,7 +1773,7 @@ GameObject:
   - component: {fileID: 843474100}
   m_Layer: 0
   m_Name: PenPig (1)
-  m_TagString: Pig
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1891,6 +1896,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -2068,6 +2074,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -2525,6 +2532,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -2690,6 +2698,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -2942,6 +2951,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -3020,6 +3030,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -3240,6 +3251,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1395536051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1395536053}
+  - component: {fileID: 1395536052}
+  - component: {fileID: 1395536054}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1395536052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395536051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4225e809291bda147b51735f389bb5b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1395536053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395536051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.407223, y: 1.0321325, z: 1.0190477}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1395536054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395536051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656390402d0b2154280f01cc80723453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1433437108
 GameObject:
   m_ObjectHideFlags: 0
@@ -3387,6 +3455,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -3636,6 +3705,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -3752,7 +3822,7 @@ GameObject:
   - component: {fileID: 1527339003}
   m_Layer: 0
   m_Name: PenCow (1)
-  m_TagString: Cow
+  m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3875,6 +3945,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -4052,6 +4123,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -4236,7 +4308,7 @@ GameObject:
   - component: {fileID: 1783169674}
   m_Layer: 0
   m_Name: PenPig
-  m_TagString: Pig
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4358,6 +4430,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -4474,7 +4547,7 @@ GameObject:
   - component: {fileID: 1858843232}
   m_Layer: 0
   m_Name: PenHog (1)
-  m_TagString: Hog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4640,6 +4713,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -4793,6 +4867,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -4970,6 +5045,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -5173,6 +5249,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 2
   timer: {fileID: 0}
   roamTimer: 2
@@ -5239,6 +5316,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -5522,6 +5600,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -5687,6 +5766,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
@@ -5753,6 +5833,7 @@ MonoBehaviour:
   timeSpent: 0
   rigidbody: {fileID: 0}
   collider2D: {fileID: 0}
+  id: 0
   speed: 6
   timer: {fileID: 0}
   roamTimer: 2
