@@ -23,11 +23,24 @@ public class Spawner : MonoBehaviour
     {
         for (int i = 0; i < numberofPrefabs; i++)
         {
+            int rand = Random.Range(0, 3);
             Vector2 spawnPosition = GetRandomPosition();
-            Instantiate(Chicken_Prefab, spawnPosition, Quaternion.identity);
-            //Instantiate(Cow_Prefab, spawnPosition, Quaternion.identity);
-            //Instantiate(Hog_Prefab, spawnPosition, Quaternion.identity);
-            //Instantiate(Pig_Prefab, spawnPosition, Quaternion.identity);
+            switch (rand)
+            {
+             case 0:
+                 Instantiate(Chicken_Prefab, spawnPosition, Quaternion.identity);
+                 break;
+             case 1:
+                Instantiate(Cow_Prefab, spawnPosition, Quaternion.identity);
+                break;
+             case 2:
+                Instantiate(Hog_Prefab, spawnPosition, Quaternion.identity);
+                break;
+            case 3:
+                Instantiate(Pig_Prefab, spawnPosition, Quaternion.identity);
+                break;
+
+            }
         }
     }
 
