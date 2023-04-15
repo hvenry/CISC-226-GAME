@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class winCondition : MonoBehaviour
 {
@@ -13,16 +14,29 @@ public class winCondition : MonoBehaviour
 
     private GameObject[] safe;
 
-    private float timeRemaining = 400f;
+    
 
     private int total = 0;
 
     private int safeLength = 0;
+
+    private float totalTime = 400f;
+    private float timeRemaining;
+
+    public Slider timeSlider;
+
+    public Slider progressSlider;
     // Start is called before the first frame update
     void Start()
     {
         // Debug.Log("Win Condition start");
        Invoke("DelayedStart",1);
+       timeRemaining = totalTime;
+       timeSlider.highValue = totalTime;
+       timeSlider.lowValue = 0;
+       timeSlider.value = timeRemaining;
+
+
     }
 
     void Switch(int id)
@@ -39,6 +53,10 @@ public class winCondition : MonoBehaviour
     void Update()
     {
         timeRemaining -= Time.deltaTime;
+        timeSlider.value = timeRemaining;
+        float percentage = total / safeLength * 100;
+        progressSlider.value = percentage;
+        
         
         if (Won() && total != 0)
         {
@@ -64,6 +82,7 @@ public class winCondition : MonoBehaviour
         total = loose.Length;
         Debug.Log(String.Format("Length of loose: {0}, Loose[0] is type of: {1}", total, loose[0].GetType()));
         EventManager.onSafe += Switch;
+        Debug.Log(String.Format("Loose: {0}", loose));
         for (int i = 0; i < loose.Length; i++)
         {
             Debug.Log(String.Format("ID: {0}, Object: {1}", i, loose[i]));

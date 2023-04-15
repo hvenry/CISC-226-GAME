@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 74817635}
   m_Layer: 0
   m_Name: PenHog
-  m_TagString: Hog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 227579921}
   m_Layer: 0
   m_Name: Pig
-  m_TagString: Pig
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -944,7 +944,7 @@ GameObject:
   - component: {fileID: 453827637}
   m_Layer: 0
   m_Name: Cow
-  m_TagString: Cow
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1186,7 +1186,7 @@ GameObject:
   - component: {fileID: 655706876}
   m_Layer: 0
   m_Name: PenCow
-  m_TagString: Cow
+  m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3769,7 +3769,7 @@ GameObject:
   - component: {fileID: 1499301206}
   m_Layer: 0
   m_Name: Chicken_pen
-  m_TagString: Cow
+  m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3855,7 +3855,7 @@ GameObject:
   - component: {fileID: 1527339003}
   m_Layer: 0
   m_Name: PenCow (1)
-  m_TagString: Cow
+  m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4116,7 +4116,7 @@ GameObject:
   - component: {fileID: 1783169674}
   m_Layer: 0
   m_Name: PenPig
-  m_TagString: Pig
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4336,7 +4336,7 @@ GameObject:
   - component: {fileID: 1858843232}
   m_Layer: 0
   m_Name: PenHog (1)
-  m_TagString: Hog
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
