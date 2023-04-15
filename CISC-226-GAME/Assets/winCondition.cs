@@ -23,18 +23,18 @@ public class winCondition : MonoBehaviour
     private float totalTime = 400f;
     private float timeRemaining;
 
-    public Slider timeSlider;
+    [SerializeField] public Slider timeSlider;
 
-    public Slider progressSlider;
+    [SerializeField] public Slider progressSlider;
     // Start is called before the first frame update
     void Start()
     {
         // Debug.Log("Win Condition start");
        Invoke("DelayedStart",1);
        timeRemaining = totalTime;
-       timeSlider.highValue = totalTime;
-       timeSlider.lowValue = 0;
-       timeSlider.value = timeRemaining;
+       // timeSlider.highValue = totalTime;
+       // timeSlider.lowValue = 0;
+       // timeSlider.value = timeRemaining;
 
 
     }
@@ -53,9 +53,9 @@ public class winCondition : MonoBehaviour
     void Update()
     {
         timeRemaining -= Time.deltaTime;
-        timeSlider.value = timeRemaining;
-        float percentage = total / safeLength * 100;
-        progressSlider.value = percentage;
+        // timeSlider.value = timeRemaining;
+        // float percentage = total / safeLength * 100;
+        // progressSlider.value = percentage;
         
         
         if (Won() && total != 0)
