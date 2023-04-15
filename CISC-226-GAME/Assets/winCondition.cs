@@ -20,7 +20,7 @@ public class winCondition : MonoBehaviour
 
     private int safeLength = 0;
 
-    private float totalTime = 400f;
+    [SerializeField] public float totalTime;
     private float timeRemaining;
     public AudioSource success;
 

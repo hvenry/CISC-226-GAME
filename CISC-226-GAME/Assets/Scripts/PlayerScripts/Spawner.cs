@@ -10,13 +10,18 @@ public class Spawner : MonoBehaviour
     [SerializeField] private GameObject Pig_Prefab;
     private int numberofPrefabs;
 
+    [SerializeField]
+    public int lower;
+
+    [SerializeField] public int upper;
+
 
     [SerializeField] private Vector2 corner1;
     [SerializeField] private Vector2 corner2;
 
     private void Start()
     {
-        numberofPrefabs = Random.Range(4,6);
+        numberofPrefabs = Random.Range(lower,upper);
         SpawnPrefabs();
         
     }

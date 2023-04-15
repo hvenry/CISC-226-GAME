@@ -462,6 +462,8 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
+  lower: 4
+  upper: 5
   corner1: {x: -20, y: -6}
   corner2: {x: -13, y: -11}
 --- !u!1 &227579920
@@ -2649,6 +2651,8 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
+  lower: 4
+  upper: 5
   corner1: {x: 15, y: -5}
   corner2: {x: 22, y: -3}
 --- !u!1 &1243430325
@@ -3957,6 +3961,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656390402d0b2154280f01cc80723453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalTime: 120
+  success: {fileID: 0}
 --- !u!114 &1545593104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4032,6 +4038,8 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
+  lower: 4
+  upper: 5
   corner1: {x: 10, y: 16}
   corner2: {x: 18, y: 10}
 --- !u!1 &1670722160
@@ -4236,6 +4244,8 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
+  lower: 4
+  upper: 5
   corner1: {x: -19, y: 15}
   corner2: {x: -13, y: 8}
 --- !u!1 &1831300538

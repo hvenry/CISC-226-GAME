@@ -33,7 +33,7 @@ public class MovementSM : StateMachine
     public float speed = 10f;
 
     public Timer timer;
-    public float roamTimer = 2f;
+    public float roamTimer;
     public int weight;
 
 
@@ -42,6 +42,7 @@ public class MovementSM : StateMachine
     {
         // For our movement, we will need to access all animal states inside one script
         // and add them to the animal's state machine
+        roamTimer = Random.Range(1.5f, 3f);
         idleState = new Idle(this);
         roamState = new Roaming(this);
         fleeState = new Fleeing(this);

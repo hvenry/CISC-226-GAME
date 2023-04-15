@@ -673,6 +673,8 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
+  lower: 6
+  upper: 8
   corner1: {x: 16, y: -21}
   corner2: {x: 23, y: -27}
 --- !u!1 &391295357
@@ -842,6 +844,8 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
+  lower: 6
+  upper: 8
   corner1: {x: 16, y: 9}
   corner2: {x: 23, y: 2}
 --- !u!1 &655706872
@@ -1634,6 +1638,8 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
+  lower: 6
+  upper: 8
   corner1: {x: -2, y: 17}
   corner2: {x: 4, y: 13}
 --- !u!4 &977166596
@@ -2417,6 +2423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656390402d0b2154280f01cc80723453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalTime: 90
+  success: {fileID: 0}
 --- !u!1 &1395759644
 GameObject:
   m_ObjectHideFlags: 0
@@ -2957,6 +2965,8 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
+  lower: 6
+  upper: 8
   corner1: {x: -19, y: -1}
   corner2: {x: -13, y: -6}
 --- !u!1 &1783169670
