@@ -20,11 +20,7 @@ public class winCondition : MonoBehaviour
 
     private int safeLength = 0;
 
-<<<<<<< Updated upstream
     [SerializeField] public float totalTime;
-=======
-    private float totalTime = 120f;
->>>>>>> Stashed changes
     private float timeRemaining;
     public AudioSource success;
 
@@ -36,6 +32,8 @@ public class winCondition : MonoBehaviour
     {
         // Debug.Log("Win Condition start");
        Invoke("DelayedStart",1);
+       success = GetComponent<AudioSource>();
+       
        timeRemaining = totalTime;
        // timeSlider.highValue = totalTime;
        // timeSlider.lowValue = 0;
