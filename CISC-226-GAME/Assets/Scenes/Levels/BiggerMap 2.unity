@@ -502,8 +502,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1783169671}
-  - {fileID: 843474097}
-  - {fileID: 1373181403}
   - {fileID: 1433437109}
   - {fileID: 1964659169}
   - {fileID: 1395759645}
@@ -523,7 +521,7 @@ GameObject:
   - component: {fileID: 262357849}
   - component: {fileID: 262357848}
   m_Layer: 0
-  m_Name: PenCow (2)
+  m_Name: Chicken Pen 2
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -541,8 +539,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 453827637}
-  m_RootOrder: 4
+  m_Father: {fileID: 1917120880}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &262357848
 MonoBehaviour:
@@ -556,7 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 025ff68cce82bcc48b65dcffe2da9b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tag: Cow
+  Tag: Chicken
 --- !u!114 &262357849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,7 +567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3bba3f7c1e112849b2df6dc83033c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TagToIgnore: Cow
+  TagToIgnore: Chicken
 --- !u!61 &262357850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -793,8 +791,6 @@ Transform:
   - {fileID: 655706873}
   - {fileID: 1527339000}
   - {fileID: 391295358}
-  - {fileID: 2116305918}
-  - {fileID: 262357847}
   - {fileID: 1101121847}
   m_Father: {fileID: 1369749394}
   m_RootOrder: 1
@@ -1403,7 +1399,7 @@ GameObject:
   - component: {fileID: 843474099}
   - component: {fileID: 843474100}
   m_Layer: 0
-  m_Name: PenPig (1)
+  m_Name: Chicken Pen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1421,8 +1417,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 227579921}
-  m_RootOrder: 1
+  m_Father: {fileID: 1917120880}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &843474098
 BoxCollider2D:
@@ -1462,7 +1458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3bba3f7c1e112849b2df6dc83033c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TagToIgnore: Pig
+  TagToIgnore: Chicken
 --- !u!114 &843474100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1475,7 +1471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 025ff68cce82bcc48b65dcffe2da9b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tag: Pig
+  Tag: Chicken
 --- !u!1 &977166594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,7 +1588,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 453827637}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1101121848
 SpriteRenderer:
@@ -2148,6 +2144,7 @@ Transform:
   - {fileID: 227579921}
   - {fileID: 453827637}
   - {fileID: 133607596}
+  - {fileID: 1917120880}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2162,7 +2159,7 @@ GameObject:
   - component: {fileID: 1373181403}
   - component: {fileID: 1373181404}
   m_Layer: 0
-  m_Name: pig_icon
+  m_Name: Chicken_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2176,12 +2173,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373181402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.92, y: -13.83, z: -0.0056945775}
+  m_LocalPosition: {x: 15.62, y: -14.84, z: -0.0056945775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 227579921}
-  m_RootOrder: 2
+  m_Father: {fileID: 1917120880}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1373181404
 SpriteRenderer:
@@ -2224,7 +2221,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6fdb3547e3315554faed1de4bf25a531, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba453448f50954e4f99dd031796d0e42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2322,7 +2319,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 227579921}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1395759646
 SpriteRenderer:
@@ -2406,7 +2403,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 227579921}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1433437110
 SpriteRenderer:
@@ -3038,6 +3035,41 @@ Transform:
   m_Father: {fileID: 673579564}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1917120879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1917120880}
+  m_Layer: 0
+  m_Name: Chicken
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1917120880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917120879}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 843474097}
+  - {fileID: 1373181403}
+  - {fileID: 262357847}
+  - {fileID: 2116305918}
+  m_Father: {fileID: 1369749394}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1937910649
 GameObject:
   m_ObjectHideFlags: 0
@@ -3153,7 +3185,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 227579921}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1964659170
 MonoBehaviour:
@@ -3321,7 +3353,7 @@ GameObject:
   - component: {fileID: 2116305918}
   - component: {fileID: 2116305919}
   m_Layer: 0
-  m_Name: cow_icon (1)
+  m_Name: Chicken_icon 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3335,11 +3367,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116305917}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.22, y: -2.07, z: -0.0056945775}
+  m_LocalPosition: {x: 1.7, y: -2.81, z: -0.0056945775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 453827637}
+  m_Father: {fileID: 1917120880}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2116305919
@@ -3383,7 +3415,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b6d6adb8fb5fd734c9249c50afa5fcd3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba453448f50954e4f99dd031796d0e42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
