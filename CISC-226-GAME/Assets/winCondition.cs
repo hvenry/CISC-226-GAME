@@ -5,15 +5,15 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class winCondition : MonoBehaviour
 {
-    
     private GameObject[] loose = Array.Empty<GameObject>();
 
     private GameObject[] safe;
 
-    private float timeRemaining = 400f;
+    private float timeRemaining = 10f;
 
     private int total = 0;
 
@@ -21,7 +21,6 @@ public class winCondition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         // Debug.Log("Win Condition start");
        Invoke("DelayedStart",1);
     }
@@ -49,6 +48,7 @@ public class winCondition : MonoBehaviour
 
         if (Lost())
         {
+            SceneManager.LoadScene("GameOver");
             Debug.Log("You lose!");
             //end game (LOSS)
         }

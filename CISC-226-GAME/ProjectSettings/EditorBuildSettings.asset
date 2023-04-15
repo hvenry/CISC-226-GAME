@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/BiggerMap 2.unity
     guid: c9118fbffc0ed6648a0ab0d0fe9dde05
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: bdcf8c6c210ad3d439c88ff32aa8c1b6
   m_configObjects: {}
