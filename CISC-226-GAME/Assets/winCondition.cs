@@ -64,6 +64,7 @@ public class winCondition : MonoBehaviour
         
         if (Won() && total != 0)
         {
+            // success.Play();
             SceneManager.LoadScene("Win");
             Debug.Log("WON GAME");
             //Trigger end game (WIN)
