@@ -17,12 +17,16 @@ public class PickUp : MonoBehaviour
    public GameObject destroyEffect;
    public Vector3 Direction { get; set; }
    private GameObject[] holdings = new GameObject[4];
-   private AudioSource error;
+   private AudioSource audioSource;
+   public AudioClip throwingAudioClip;
+   public AudioClip pickUpAudioClip;
+   public AudioClip errorAudio;
+       
 
    void Start()
    {
        spots = new Transform[] { holdSpot, holdSpot2, holdSpot3, holdSpot4 };
-       error = GetComponent<AudioSource>();
+       audioSource = GetComponent<AudioSource>();
    }
    void Update()
    {
@@ -64,6 +68,7 @@ public class PickUp : MonoBehaviour
                        script.ChangeState(script.heldState);
                        temp.GetComponent<Rigidbody2D>().simulated = false;
                        holdings[i] = temp;
+                       audioSource.PlayOneShot(pickUpAudioClip);
                        break;
 
 
@@ -72,7 +77,7 @@ public class PickUp : MonoBehaviour
                else
                {
                    //play sound 
-                   error.Play();
+                   audioSource.PlayOneShot(errorAudio);
                }
            }
           
@@ -87,6 +92,7 @@ public class PickUp : MonoBehaviour
                script.ChangeState(script.thrownState);
                first.GetComponent<Rigidbody2D>().simulated = true;
                
+               audioSource.PlayOneShot(throwingAudioClip);
                holdings[0] = holdings[1];
                
                if (holdings[0] is not null)

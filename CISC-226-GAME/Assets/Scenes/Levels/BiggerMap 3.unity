@@ -1416,6 +1416,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   destroyEffect: {fileID: 0}
+  throwingAudioClip: {fileID: 8300000, guid: e9cae4740e8a14b42a220bcc8dd4ea2c, type: 3}
+  pickUpAudioClip: {fileID: 8300000, guid: 52d339d50f4ade6448c1e2f363328839, type: 3}
+  errorAudio: {fileID: 8300000, guid: 0964884fc58eb484885a5d145611ddb9, type: 3}
 --- !u!114 &673579567
 MonoBehaviour:
   m_ObjectHideFlags: 0

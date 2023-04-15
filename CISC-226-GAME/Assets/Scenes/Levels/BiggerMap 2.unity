@@ -673,7 +673,6 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
-  numberofPrefabs: 1
   corner1: {x: 16, y: -21}
   corner2: {x: 23, y: -27}
 --- !u!1 &391295357
@@ -843,7 +842,6 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
-  numberofPrefabs: 1
   corner1: {x: 16, y: 9}
   corner2: {x: 23, y: 2}
 --- !u!1 &655706872
@@ -1017,6 +1015,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   destroyEffect: {fileID: 0}
+  throwingAudioClip: {fileID: 8300000, guid: e9cae4740e8a14b42a220bcc8dd4ea2c, type: 3}
+  pickUpAudioClip: {fileID: 8300000, guid: 52d339d50f4ade6448c1e2f363328839, type: 3}
+  errorAudio: {fileID: 8300000, guid: 0964884fc58eb484885a5d145611ddb9, type: 3}
 --- !u!114 &673579567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,7 +1183,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0964884fc58eb484885a5d145611ddb9, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1505,7 +1506,6 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
-  numberofPrefabs: 2
   corner1: {x: -2, y: 17}
   corner2: {x: 4, y: 13}
 --- !u!4 &977166596
@@ -2829,7 +2829,6 @@ MonoBehaviour:
   Cow_Prefab: {fileID: 6651650996837469743, guid: fe944ddae61c9d242913a1589ca330c4, type: 3}
   Hog_Prefab: {fileID: 6651650996837469743, guid: 2572ce072a180214abe565edce26e4dc, type: 3}
   Pig_Prefab: {fileID: 6651650996837469743, guid: 3fecf55659827df498c00bfcb5874ab1, type: 3}
-  numberofPrefabs: 1
   corner1: {x: -19, y: -1}
   corner2: {x: -13, y: -6}
 --- !u!1 &1783169670
