@@ -20,7 +20,11 @@ public class winCondition : MonoBehaviour
 
     private int safeLength = 0;
 
+<<<<<<< Updated upstream
     [SerializeField] public float totalTime;
+=======
+    private float totalTime = 120f;
+>>>>>>> Stashed changes
     private float timeRemaining;
     public AudioSource success;
 
@@ -103,12 +107,14 @@ public class winCondition : MonoBehaviour
         int seconds = Mathf.FloorToInt(timeRemaining % 60);
 
         // Create a string to display the time remaining in minutes and seconds
-        string timeRemainingString = string.Format("TIME: {0:00}:{1:00}", minutes, seconds);
+        string timeRemainingString = string.Format("<color=white>TIME: {0:00}:{1:00}</color>", minutes, seconds);
 
-        string progress = string.Format("ANIMALS WRANGLED: {0}/{1}", safeLength, total);
+        string progress = string.Format("<color=white>ANIMALS WRANGLED: {0}/{1}</color>", safeLength, total);
+
         // change font of GUI
         GUIStyle style = new GUIStyle();
-        style.fontSize = 30;
+        
+        style.fontSize = 24;
 
         // Measure the width of the label based on the text and style
         Vector2 size = style.CalcSize(new GUIContent(timeRemainingString));
@@ -117,7 +123,8 @@ public class winCondition : MonoBehaviour
 
         // Set the position and size of the label
         Rect labelRect = new Rect((Screen.width - size.x) / 2, 30, size.x, 40);
-        Rect progressRect = new Rect((Screen.width - progressSize.x) / 2, 60, size.x, 40);
+        Rect progressRect = new Rect(20, Screen.height - 50, 250, 40);
+
         
         // Display the label
         GUI.Label(labelRect, timeRemainingString, style);
