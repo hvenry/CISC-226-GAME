@@ -22,6 +22,7 @@ public class winCondition : MonoBehaviour
 
     private float totalTime = 400f;
     private float timeRemaining;
+    public AudioSource success;
 
     [SerializeField] public Slider timeSlider;
 
@@ -45,6 +46,7 @@ public class winCondition : MonoBehaviour
         
         safe[id] = loose[id];
         safeLength++;
+        success.Play();
         Debug.Log(String.Format("Length of loose: {0}, safe: {1}. total: {2}",loose.Length, safeLength,total));
         
     }
