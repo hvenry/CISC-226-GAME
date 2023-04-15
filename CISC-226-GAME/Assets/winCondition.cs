@@ -59,7 +59,7 @@ public class winCondition : MonoBehaviour
         loose = loose.Concat(GameObject.FindGameObjectsWithTag("Cow")).ToArray();
         loose = loose.Concat(GameObject.FindGameObjectsWithTag("Pig")).ToArray();
         loose = loose.Concat(GameObject.FindGameObjectsWithTag("Hog")).ToArray();
-        loose = loose.Concat(GameObject.FindGameObjectsWithTag("Camel")).ToArray();
+        loose = loose.Concat(GameObject.FindGameObjectsWithTag("Chicken")).ToArray();
         total = loose.Length;
         Debug.Log(String.Format("Length of loose: {0}, Loose[0] is type of: {1}", total, loose[0].GetType()));
         EventManager.onSafe += Switch;
