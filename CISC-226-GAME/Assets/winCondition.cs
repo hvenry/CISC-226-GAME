@@ -13,7 +13,7 @@ public class winCondition : MonoBehaviour
 
     private GameObject[] safe;
 
-    private float timeRemaining = 10f;
+    private float timeRemaining = 400f;
 
     private int total = 0;
 
