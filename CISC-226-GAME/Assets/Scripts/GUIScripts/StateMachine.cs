@@ -48,11 +48,11 @@ public class StateMachine : MonoBehaviour
     private void OnGUI()
     // will be removed, from tutorial code 
     {
-        if ((currentState.name == "Roam")|(currentState.name == "Thrown"))
-        {
-            string content = currentState != null ? currentState.name : "(NA)";
-            GUILayout.Label($"<color='black'><size=40>{content}</size></color>");
-        }
+        // if ((currentState.name == "Roam")|(currentState.name == "Thrown"))
+        // {
+        //     string content = currentState != null ? currentState.name : "(NA)";
+        //     GUILayout.Label($"<color='black'><size=40>{content}</size></color>");
+        // }
         
     }
 

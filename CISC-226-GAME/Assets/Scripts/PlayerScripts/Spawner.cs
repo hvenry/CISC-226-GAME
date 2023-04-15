@@ -17,6 +17,7 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         SpawnPrefabs();
+        numberofPrefabs = Random.Range(3, 6);
     }
 
     private void SpawnPrefabs()
